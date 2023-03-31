@@ -9,7 +9,9 @@ public class Main {
         Function<Coffee,Integer> discount = (coffee) -> coffee.prices / 3;
 
         CreditCard cc = new CreditCard();
-        Purchase pNoDiscount = CoffeeStore.buyCoffee(cc, noDiscount);
-        Purchase pDiscount = CoffeeStore.buyCoffee(cc, discount);
+        Tuple<Payment,Coffee> tNoDiscount = CoffeeStore.buyCoffee(cc,
+                                                                  noDiscount);
+        Tuple<Payment,Coffee> tDiscount = CoffeeStore.buyCoffee(cc,
+                                                                discount);
     }
 }
