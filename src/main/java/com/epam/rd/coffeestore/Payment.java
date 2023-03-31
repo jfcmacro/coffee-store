@@ -9,4 +9,9 @@ public class Payment {
         this.creditCard = creditCard;
         this.amount = amount;
     }
+
+    public Payment combine(Payment payment) {
+        return new Payment(creditCard,
+                           amount + payment.amount);
+    }
 }
